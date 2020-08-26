@@ -36,12 +36,12 @@ exports.uploadProperty = (req, res) => {
           err: "Image should be less than 16mb",
         });
       }
-      schema1.photo.data = fs.readFileSync(file.photo.path);
-      schema1.photo.contentType = file.photo.type;
+      schema2.photo.data = fs.readFileSync(file.photo.path);
+      schema2.photo.contentType = file.photo.type;
     }
 
     console.log(schema2);
-    schema1.save((err, property) => {
+    schema2.save((err, property) => {
       if (err) {
         res.status(400).json({
           err: err.message,

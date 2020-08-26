@@ -52,11 +52,10 @@ const Schema2 = new mongoose.Schema({
     enum: ["laxmi nagar", "saket", "nirman vihar"],
     required: true,
   },
-  // photos: {
-  //   data: Buffer,
-  //   contentType: String,
-  //   required: true,
-  // },
+  photo: {
+    data: Buffer,
+    contentType: String,
+  },
   customer_type: {
     type: String,
     enum: ["male", "female", "live in", "indifferent"],
